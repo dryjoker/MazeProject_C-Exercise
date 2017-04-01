@@ -16,7 +16,7 @@ void run(char ch)//w s a d
 	{
 		case 'w':
 			//i-1ゲ斗单0
-			if (ipos - 1 >= 0)
+			if (ipos - 1 >= 0 && Realdata[ipos - 1][jpos]<2)
 			{
 				//跑计计ユ传 0传1 1传0
 				int tmp = Realdata[ipos][jpos];
@@ -26,7 +26,7 @@ void run(char ch)//w s a d
 			}
 			break;
 		case 's':
-			if (ipos + 1 <= N - 1)//2d-array 程夹9
+			if (ipos + 1 <= N - 1 && Realdata[ipos + 1][jpos]<2)//2d-array 程夹9
 			{
 				//跑计计ユ传 0传1 1传0
 				int tmp = Realdata[ipos][jpos];
@@ -37,7 +37,7 @@ void run(char ch)//w s a d
 			break;
 		case 'a':
 			//j-1ゲ斗单0
-			if (jpos - 1 >= 0)
+			if (jpos - 1 >= 0 && Realdata[ipos][jpos-1]<2)
 			{
 				//跑计计ユ传 0传1 1传0
 				int tmp = Realdata[ipos][jpos];
@@ -48,7 +48,7 @@ void run(char ch)//w s a d
 			break;
 		case 'd':
 			//j+1ゲ斗单9
-			if (jpos + 1 <= N-1)
+			if (jpos + 1 <= N-1 && Realdata[ipos][jpos + 1]<2)
 			{
 				//跑计计ユ传 0传1 1传0
 				int tmp = Realdata[ipos][jpos];
